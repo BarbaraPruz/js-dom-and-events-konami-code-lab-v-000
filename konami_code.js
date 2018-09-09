@@ -5,10 +5,14 @@ function init() {
   const body = document.querySelector('body');
   let codeIdx = 0;
   body.addEventListener('keydown', function(event) {
-    if (event.which == code[codeIdx]) {
+     const key = parseInt(event.detail || event.which);
+    if (key == code[codeIdx]) {
       if (++codeIdx >= code.length) {
           alert('Congratulations!');
+          codeIdx = 0;
       }
+    }
+    else {
       codeIdx = 0;
     }
   });
