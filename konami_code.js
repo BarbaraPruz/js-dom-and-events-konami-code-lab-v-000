@@ -5,8 +5,7 @@ function init() {
   const body = document.getElementById('body');
   let codeIdx = 0;
   body.addEventListener('keydown', function(event) {
-    console.log("event ",event.which,"type",typeof(event.which));
-    if (event.which === code[codeIdx]) {
+    if (event.which == code[codeIdx]) {
       if (++codeIdx >= code.length)
           alert('Congratulations!');
       }
